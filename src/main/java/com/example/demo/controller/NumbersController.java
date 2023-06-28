@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api")
 public class NumbersController {
 
+    private int a = 0;
     private final NumbersService numbersService;
 
     @Autowired
