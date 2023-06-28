@@ -17,4 +17,15 @@ public class NumbersController {
         this.numbersService = numbersService;
     }
 
+    @PostMapping("/add")
+    public ResponseEntity<Integer> addNumbers(@RequestParam int a, @RequestParam int b){
+        int result = numbersService.addNumbers(a,b);
+        return ResponseEntity.ok(result);
+    }
+    @PostMapping("/divide")
+    public ResponseEntity<Integer> divideNumbers(@RequestParam int a, @RequestParam int b){
+        int result = numbersService.divideNumbers(a,b);
+        return ResponseEntity.ok(result);
+    }
+
 }

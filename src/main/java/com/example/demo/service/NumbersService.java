@@ -9,4 +9,8 @@ public class NumbersService {
         return a+b;
     }
 
+    public int divideNumbers(int a, int b){
+        return a/b;
+    }
+
 }
