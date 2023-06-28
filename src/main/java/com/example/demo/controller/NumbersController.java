@@ -2,7 +2,6 @@ package com.example.demo.controller;
 
 import com.example.demo.service.NumbersService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 
@@ -18,14 +17,14 @@ public class NumbersController {
     }
 
     @PostMapping("/add")
-    public ResponseEntity<Integer> addNumbers(@RequestParam int a, @RequestParam int b){
+    public int addNumbers(@RequestParam int a, @RequestParam int b){
         int result = numbersService.addNumbers(a,b);
-        return ResponseEntity.ok(result);
+        return result;
     }
     @PostMapping("/divide")
-    public ResponseEntity<Integer> divideNumbers(@RequestParam int a, @RequestParam int b){
+    public int divideNumbers(@RequestParam int a, @RequestParam int b){
         int result = numbersService.divideNumbers(a,b);
-        return ResponseEntity.ok(result);
+        return result;
     }
 
 }
