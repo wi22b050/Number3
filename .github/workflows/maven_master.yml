@@ -31,9 +31,8 @@ jobs:
       run: mvn -B package --file pom.xml
 
 
-    - run: mkdir staging cp target/*.jar staging
-    - name: upload
-      uses: actions/upload-artifact@v2
+    - run: mkdir download && cp target/*.jar download  
+    - uses: actions/upload-artifact@v2
       with:
-        name: NumbersService
-        path: staging
+        name: Build
+        path: download
